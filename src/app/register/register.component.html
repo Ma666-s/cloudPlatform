@@ -1,0 +1,75 @@
+<body style="background-image: url(https://images.unsplash.com/photo-1543927491-41eeec5e1bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80); background-repeat: no-repeat; background-size: cover;">
+&nbsp;
+    <div class="container" >
+    <div class="row">
+        <div class="col">
+            <form class="shadow p-3 mb-5 bg-body-tertiary rounded" [formGroup]="regiteration" 
+            style="background-image: linear-gradient(to left, #94989f52, #90949b52, #8d91974f, #898d9434, #868a9044);">
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input formControlName="UserName" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input formControlName="Email" type="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input formControlName="Password" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input formControlName="ConfirmPassword" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input formControlName="PhoneNumber" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <select formControlName="City" class="form-control">
+                        <option>Select your City</option>
+                        <option>Dhaka</option>
+                        <option>Chittagong</option>
+                        <option>Khulna</option>
+                        <option>Rajshahi</option>
+                        <option>Sylhet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Postal Code</label>
+                    <input formControlName="PostalCode" type="text" class="form-control">
+                    </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select formControlName="Gender" class="form-control">
+                        <option>Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input formControlName="DateOfBirth" type="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea formControlName="Address" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Profile Image</label>
+                    <input formControlName="ProfileImage" type="file" class="form-control">
+                </div>
+                &nbsp;
+                <button type="submit" value="submit" class="btn btn-light">Submit</button>
+            </form>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col">
+            <div class="display-1" style="font-family: 'Times New Roman', Times, serif;">Register<br> your data...</div>
+        </div>
+    </div>
+    
+    &nbsp;

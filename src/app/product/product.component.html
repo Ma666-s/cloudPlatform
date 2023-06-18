@@ -1,0 +1,104 @@
+<div class="raw">
+  <div class="container-md">
+<img [src]="img" id="container">
+  </div>
+</div>
+
+<div class="container-md">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img [src]="imgtwo" class="card-img-top" alt="Skyscrapers" />
+        <div class="card-body">
+          <h5 class="card-title">This is Product</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+          Discount: {{0.3 | percent}}
+          <h3 *ngIf="Nodiscount">No Discount</h3>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+          <img [src]="imgone" alt="Storelogo">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img [src]="imgthree" class="card-img-top"
+          alt="Los Angeles Skyscrapers" />
+        <div class="card-body">
+          <h5 class="card-title">This is Product</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          Discount: {{0.4 | percent}}
+          <h3 *ngIf="Nodiscount">No Discount</h3>
+        </div>
+        <div class="card-foote">
+          <small class="text-muted">Last updated 10 mins ago</small>
+          <img [src]="imgone" alt="Storelogo">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img [src]="imgfour" class="card-img-top" alt="Palm Springs Road" />
+        <div class="card-body">
+          <h5 class="card-title">This is Product</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This card has even longer content than the first to show
+            that equal height action.
+          </p>
+          Discount: {{0.35 | percent}}
+          <h3 *ngIf="Nodiscount">No Discount</h3>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 hours ago</small>
+          <img [src]="imgone" alt="Storelogo">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="products" *ngIf="!IsPurchased else thankYou">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="row-cols-md-12 trip">
+        <table class="table table-bordered table-sm">
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Image</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let elem of ProductList">
+              <td>{{elem.ID}}</td>
+              <td>{{elem.Name}}</td>
+              <td>{{elem.Price}}</td>
+              <td>{{elem.Quantity}}</td>
+              <td>{{elem.Image}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #thankYou>
+  <div>Thank You for Burchace {{Product}}</div>
+</ng-template>
+
+<button *ngIf="">buy</button>
+<div>
+  <select name="cars" class="custom-select mb-3" #text>
+    <option *ngFor="let items of Dropdown">
+      {{items}}
+    </option>
+  </select>
+  <button (click)="Buy(text.value)">Buy</button>
+</div>

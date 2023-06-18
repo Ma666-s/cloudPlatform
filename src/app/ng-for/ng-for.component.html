@@ -1,0 +1,25 @@
+<div class="container-fluid">
+<div class="row">
+        <div class="row-cols-md-12 trip">
+            <table class="table table-bordered table-sm">
+                <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Image</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let elem of ProductList">
+                <td>{{elem.ID}}</td>
+                <td>{{elem.Name}}</td>
+                <td>{{elem.Price}}</td>
+                <td>{{elem.Quantity}}</td>
+                <td>{{elem.Image}}</td>
+            </tr>
+            </tbody>
+            </table>
+       </div>
+ </div>
+</div>
+<button *ngIf="">buy</button>
